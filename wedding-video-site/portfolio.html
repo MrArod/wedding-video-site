@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Forever Films</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>Portfolio - Wedding Videography</title>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav class="navbar">
-        <div class="logo">Forever Films</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="section" style="margin-top: 80px;">
-      <h2 class="section-title">Our Portfolio</h2>
-      <p style="max-width: 700px; margin: 0 auto 40px; text-align: center; color: #555555;">
-        Below are some examples of the visual style and atmosphere we create for
-        our couples. Each film is carefully crafted to highlight the
-        personality of the couple and the beauty of their celebration.
-      </p>
-      <div class="portfolio-grid">
-        <img src="images/portfolio1.png" alt="Wedding detail" />
-        <img src="images/portfolio2.png" alt="Film strip design" />
-        <img src="images/camera.png" alt="Videography illustration" />
-        <img src="images/hero.png" alt="Romantic floral background" />
-        <img src="images/background.png" alt="Watercolour bokeh" />
-        <img src="images/portfolio1.png" alt="Wedding detail" />
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Forever Films. All Rights Reserved.</p>
-      <div class="social-icons">
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-    </footer>
-  </body>
+    <main>
+        <h1>Portfolio</h1>
+        <section id="videos">
+            <h2>Video Highlights</h2>
+            <!-- Portfolio Videos: replace 'VIDEO_ID_X' with your own YouTube video IDs -->
+            <div class="grid-3-col">
+                <iframe class="responsive-video" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Portfolio Video 1" frameborder="0" allowfullscreen></iframe>
+                <iframe class="responsive-video" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Portfolio Video 2" frameborder="0" allowfullscreen></iframe>
+                <iframe class="responsive-video" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Portfolio Video 3" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="reels">
+            <h2>Instagram Reels</h2>
+            <!-- Portfolio Reels: replace '#' and placeholder images with real Instagram links and thumbnails -->
+            <div class="grid-3-col reel-grid">
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/400x400.png?text=Reel+1&amp;bg=000000&amp;fg=FFFFFF" alt="Instagram Reel 1" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/400x400.png?text=Reel+2&amp;bg=000000&amp;fg=FFFFFF" alt="Instagram Reel 2" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/400x400.png?text=Reel+3&amp;bg=000000&amp;fg=FFFFFF" alt="Instagram Reel 3" />
+                </a>
+            </div>
+        </section>
+        <section id="instagram-cta">
+            <div class="cta">
+                <a href="https://instagram.com/sir.aesthetic" target="_blank" class="btn">Follow us on Instagram</a>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
