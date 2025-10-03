@@ -1,80 +1,252 @@
-/* ===== Monochrome Theme ===== */
-:root{
-  --bg: #ffffff;
-  --ink: #111111;
-  --ink-soft: #666666;
-  --line: #e6e6e6;
-  --accent: #000000; /* buttons/links */
+/* High production value styles for wedding videography site */
+:root {
+  --primary-color: #2a2a72;
+  --secondary-color: #f7f5ef;
+  --accent-color: #c996cc;
+  --light-bg: #fdf8f6;
+  --dark-bg: #1f1f47;
+  --text-color: #333;
+  --text-light: #f8f8f8;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color: var(--ink);
-  background: var(--bg);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light-bg);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-/* NAV */
-.navbar{
-  position: sticky; top:0; z-index:10;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 20px; background:#fff; border-bottom:1px solid var(--line);
-}
-.logo{ font-weight:700; letter-spacing:.5px }
-.nav-links{ list-style:none; display:flex; gap:18px; margin:0; padding:0 }
-.nav-links a{ text-decoration:none; color:var(--ink); }
-.nav-links a:hover{ text-decoration:underline }
+a { text-decoration: none; }
 
-/* BUTTONS */
-.btn{
-  display:inline-block; padding:10px 16px; text-decoration:none; cursor:pointer;
-  border:1px solid var(--accent);
-}
-.btn-primary{ background:var(--accent); color:#fff; }
-.btn-primary:hover{ opacity:.9 }
-.btn-secondary{ background:#fff; color:var(--accent); }
-.btn-secondary:hover{ background:#111; color:#fff; }
-
-/* LAYOUT */
-.section{ padding:56px 20px; }
-.section-title{ text-align:center; margin:0 0 18px 0; }
-.container{ max-width:1100px; margin:0 auto; }
-
-/* HERO (video) */
-.hero{ position:relative; }
-.hero-video-wrap{ position:relative; overflow:hidden; }
-.video-embed{ position:relative; width:100%; padding-top:56.25%; }
-.video-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0 }
-
-.hero-content{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  pointer-events:none;
-}
-.hero-content .panel{
-  pointer-events:auto;
-  background:#ffffffcc; color:#000; border:1px solid var(--accent);
-  padding:16px 20px; text-align:center;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(31,31,71,0.9);
+  z-index: 1000;
 }
 
-/* CARDS / GRID */
-.grid-3{ display:grid; gap:20px; grid-template-columns:repeat(3,1fr); }
-@media (max-width:900px){ .grid-3{ grid-template-columns:1fr } }
-
-.card{
-  background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px;
+.navbar .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
 }
-.card h3{ margin-top:0 }
-.price{ font-weight:700; color:#000; }
 
-/* PORTFOLIO */
-.portfolio-row{ display:grid; gap:16px; grid-template-columns:repeat(3,1fr); margin-bottom:28px; }
-@media (max-width:900px){ .portfolio-row{ grid-template-columns:1fr } }
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-.reel-card{ display:block; border:1px solid var(--line); overflow:hidden; }
-.reel-card img{ width:100%; height:auto; display:block; transition:transform .25s ease, opacity .25s ease; }
-.reel-card:hover img{ transform:scale(1.02); opacity:.95 }
+.navbar nav a {
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-/* FOOTER */
-footer{ padding:24px 20px; border-top:1px solid var(--line); text-align:center; color:var(--ink-soft); }
+.navbar nav a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../images/hero-wedding.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(31,31,71,0.6);
+}
+
+.hero .content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #b07cb0;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about img {
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.about .text {
+  flex: 1;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: var(--primary-color);
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+}
+
+/* Contact Section */
+.contact {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: var(--text-light);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #cbd5e1;
+}
+
+.contact button {
+  padding: 0.75rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: #b07cb0;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+footer a {
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
