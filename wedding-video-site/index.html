@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Videography</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forever Films - Wedding Videography</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="featured-video">
-            <!-- Featured video embed: replace 'VIDEO_ID' in the src URL with your video ID -->
-            <iframe class="responsive-video" 
-                    src="https://www.youtube.com/embed/VIDEO_ID" 
-                    title="Featured Video" frameborder="0" allowfullscreen></iframe>
-        </section>
-        <section id="hero">
-            <!-- Hero background video: insert your video file URL in the src attribute below -->
-            <video class="hero-video" src="#" autoplay muted loop playsinline></video>
-            <div class="hero-content">
-                <h1>Capturing Your Love Story</h1>
-                <p>Relive every moment through cinematic storytelling.</p>
-            </div>
-        </section>
-    </main>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Forever Films</h1>
+    <p>Capturing your love story with cinematic artistry.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <img src="https://images.pexels.com/photos/2959190/pexels-photo-2959190.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Wedding Couple">
+    <div class="text">
+      <h2>Videography with Heart</h2>
+      <p>We are dedicated to telling your story through beautiful visuals and authentic moments. Our team blends creative composition with natural emotion to craft films you'll cherish forever.</p>
+    </div>
+  </section>
+
+  <!-- Wedding Collection Section -->
+  <section class="section">
+    <img src="https://images.pexels.com/photos/1629791/pexels-photo-1629791.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Wedding Kiss">
+    <div class="text">
+      <h2>Wedding Collection</h2>
+      <p>Our wedding films capture every heartfelt glance, joyful laugh, and unforgettable vow. Let us turn your day into a timeless film you will treasure.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>If you’d like to capture your special moment, please fill out the form below.</h2>
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <div class="row">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+      </div>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="column">
+    <h3>Site Map</h3>
+    <a href="services.html">Services</a><br>
+    <a href="portfolio.html">Portfolio</a><br>
+  </div>
+  <div class="column">
+    <h3>Follow</h3>
+    <a href="https://instagram.com/sir.aesthetic" target="_blank" rel="noopener">Instagram</a><br>
+    <a href="#">YouTube</a>
+  </div>
+</footer>
+
 </body>
 </html>
